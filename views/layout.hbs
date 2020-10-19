@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="/bootstrap/themes/united.min.css">
     <link rel="stylesheet" href="/datatables/datatables.min.css">
+    <link rel="stylesheet" href="/bootstraap/_sidebar.scss">
 
     <link rel="stylesheet" href="/datepicker/css/bootstrap-datepicker3.css">
     <link rel="stylesheet" href="/css/footer.css">
@@ -37,7 +38,180 @@
 
 <body class="{{bodyClass}}">
 
-    <nav class="navbar navbar-default navbar-static-top">
+
+{{!-- <nav class="mnb navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">En</a></li>
+     
+        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{user.username}} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/users/account">
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{#translate}}Account{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/settings">
+                                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> {{#translate}}Settings{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/blacklist">
+                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> {{#translate}}Blacklist{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/users/api">
+                                        <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> {{#translate}}API{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/users/logout">
+                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> {{#translate}}Log out{{/translate}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+      </ul>
+      <form class="navbar-form search-form navbar-right">
+        <input type="text" class="form-control" placeholder="Search...">
+      </form>
+    </div>
+  </div>
+</nav> --}}
+<!--msb: main sidebar-->
+<div class="msb" id="msb">
+		<nav class="navbar" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<div class="brand-wrapper">
+					<!-- Brand -->
+					<div class="brand-name-wrapper">
+						<a class="navbar-brand" href="/"><i class="glyphicon glyphicon-envelope"></i> Mailtrain</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- Main Menu -->
+			<div class="side-menu-container">
+				<ul class="nav navbar-nav">
+                    {{#each menu}}
+                        {{#if selected}}
+                            <li class="active"><a href="{{url}}">{{title}} <span class="sr-only">(current)</span></a></li>
+                        {{else}}
+                            <li><a href="{{url}}">{{title}}</a></li>
+                        {{/if}}
+                    {{/each}}
+                    <li><a href="https://github.com/Mailtrain-org/mailtrain/wiki"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> {{#translate}}Wiki{{/translate}}</a></li>
+                    <li><a href="https://mailtrain.wordpress.com/"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> {{#translate}}Blog{{/translate}}</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>  
+</div>
+
+
+<div class="page-main-header">
+    <div class="main-header-right row">
+        <div class="mobile-sidebar d-block"><div class="media-body text-right switch-sm"><label class="switch"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg></a></label></div></div>
+        <div class="nav-right col p-0">
+            
+  {{!-- <ul class="nav-menus ">
+      <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{user.username}} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/users/account">
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{#translate}}Account{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/settings">
+                                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> {{#translate}}Settings{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/blacklist">
+                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> {{#translate}}Blacklist{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/users/api">
+                                        <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> {{#translate}}API{{/translate}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/users/logout">
+                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> {{#translate}}Log out{{/translate}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+  </ul> --}}
+
+        </div>
+    </div>
+</div>
+<!--main content wrapper-->
+<div class="mcw">
+  <!--navigation here-->
+  <!--main content view-->
+  <div class="cv">
+
+          {{#if indexPage}}
+          
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="pull-right col-md-4">
+                    {{{shoutout}}}
+                </div>
+
+                <h1><img class="img-responsive" src="/mailtrain-header.png"></h1>
+                <p>{{#translate}}Self Hosted Newsletter App Built on Top of Nodemailer{{/translate}}</p>
+                <p>
+                    <a class="btn btn-info btn-md" href="https://github.com/Mailtrain-org/mailtrain" role="button"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> {{#translate}}Source on GitHub{{/translate}}</a>
+
+                    <a class="btn btn-success btn-md" href="http://mailtrain.org/subscription/EysIv8sAx" role="button"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{#translate}}Subscribe to Our Newsletter{{/translate}}</a>
+                </p>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    {{/if}}
+
+    <div class="container">
+
+        {{flash_messages}} {{{body}}}
+
+    </div>
+
+    <div>
+     
+
+    </div>
+  </div>
+<footer class="footer">
+        <div class="container">
+            <p class="text-muted">&copy; 2016 Kreata OÜ <a href="https://mailtrain.org">Mailtrain.org</a>, <a href="mailto:info@mailtrain.org">info@mailtrain.org</a>. <a href="https://github.com/Mailtrain-org/mailtrain">{{#translate}}Source on GitHub{{/translate}}</a></p>
+        </div>
+    </footer>
+</div>
+
+
+
+
+
+
+    {{!-- <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -149,7 +323,7 @@
         <div class="container">
             <p class="text-muted">&copy; 2016 Kreata OÜ <a href="https://mailtrain.org">Mailtrain.org</a>, <a href="mailto:info@mailtrain.org">info@mailtrain.org</a>. <a href="https://github.com/Mailtrain-org/mailtrain">{{#translate}}Source on GitHub{{/translate}}</a></p>
         </div>
-    </footer>
+    </footer> --}}
 
     <script src="/javascript/jquery-2.2.1.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>

@@ -7,25 +7,13 @@ services:
       - MYSQL_DATABASE=mailtrain
       - MYSQL_USER=mailtrain
       - MYSQL_PASSWORD=mailtrain
-    volumes:
-      - mailtrain-mysq-data:/var/lib/mysql
   redis:
     image: redis:3.0
-    volumes:
-      - mailtrain-redis-data:/data
+
   mailtrain:
-    image: mailtrain:latest
-    depends_on:
-      - mysql
-      - redis
-    volumes:
-      - mailtrain-node-config:/app/config
-      - mailtrain-node-data:/app/public/grapejs/uploads
-      - mailtrain-node-data:/app/public/mosaico/uploads
-      - mailtrain-node-reports:/app/protected/reports
-volumes:
-  mailtrain-mysq-data: {}
-  mailtrain-redis-data: {}
-  mailtrain-node-data: {}
-  mailtrain-node-config: {}
-  mailtrain-node-reports: {}
+    build: ./
+    # volumes:
+      # - ./:/app
+    ports:
+      - "3000:3000"
+    restart: always
