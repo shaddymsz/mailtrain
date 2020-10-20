@@ -3,10 +3,12 @@
     <li><a href="/reports">{{#translate}}Reports{{/translate}}</a></li>
     <li class="active">{{#translate}}Create Report{{/translate}}</li>
 </ol>
-
+<div class="card">
+   <div class="card-header"> 
 <h2>{{#translate}}Create Report{{/translate}}</h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form class="form-horizontal" method="post" action="/reports/create">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -21,3 +23,5 @@
         </div>
     </div>
 </form>
+</div>
+</div>

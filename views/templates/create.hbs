@@ -3,10 +3,12 @@
     <li><a href="/templates/">{{#translate}}Templates{{/translate}}</a></li>
     <li class="active">{{#translate}}Create Template{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Create Template{{/translate}}</h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form class="form-horizontal" method="post" action="/templates/create">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -78,6 +80,8 @@
         <input type="hidden" name="text" value="{{text}}">
         <input type="hidden" name="html" value="{{html}}">
     </div>
+</div>
+</div>
 </div>
 
 <script>

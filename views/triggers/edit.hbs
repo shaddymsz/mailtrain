@@ -3,10 +3,12 @@
     <li><a href="/triggers/">{{#translate}}Automation Triggers{{/translate}}</a></li>
     <li class="active">{{#translate}}Edit Trigger{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Edit Trigger{{/translate}} <a class="btn btn-default btn-xs" href="/triggers/" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> {{#translate}}Back to triggers{{/translate}}</a></h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form method="post" class="delete-form" id="triggers-delete" action="/triggers/delete">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -175,3 +177,5 @@
 
 
 </form>
+</div>
+</div>

@@ -2,9 +2,11 @@
     <li><a href="/">{{#translate}}Home{{/translate}}</a></li>
     <li class="active">{{#translate}}Blacklist{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Blacklist{{/translate}}</h2>
-
+</div>
+<div class="card-body">
 <form class="form-horizontal" method="post" action="/blacklist/ajax/add">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <input type="hidden" name="next" value="/blacklist">
@@ -38,4 +40,6 @@
             </th>
         </thead>
     </table>
+</div>
+</div>
 </div>

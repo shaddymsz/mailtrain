@@ -3,10 +3,12 @@
     <li><a href="/reports">{{#translate}}Reports{{/translate}}</a></li>
     <li class="active">{{#translate}}Edit Report{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Edit Report{{/translate}}</h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form method="post" class="delete-form" id="reports-delete" action="/reports/delete">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -32,3 +34,5 @@
     </div>
 
 </form>
+</div>
+</div>

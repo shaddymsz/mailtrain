@@ -4,10 +4,12 @@
     <li><a href="/lists/view/{{id}}">{{name}}</a></li>
     <li class="active">{{#translate}}Edit List{{/translate}}</li>
 </ol>
+<div class="card">
+    <div class="card-header">
+<h2>{{#translate}}Edit List{{/translate}} <a class="btn btn-default" href="/lists/view/{{id}}" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> {{#translate}}View List{{/translate}}</a></h2>
 
-<h2>{{#translate}}Edit List{{/translate}} <a class="btn btn-default btn-xs" href="/lists/view/{{id}}" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> {{#translate}}View List{{/translate}}</a></h2>
-
-<hr>
+</div>
+<div class="card-body">
 
 <form method="post" class="delete-form" id="lists-delete" action="/lists/delete">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -102,3 +104,5 @@
         </div>
     </div>
 </form>
+</div>
+</div>

@@ -2,10 +2,12 @@
     <li><a href="/">{{#translate}}Home{{/translate}}</a></li>
     <li class="active">{{#translate}}Settings{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Settings{{/translate}}</h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form method="post" id="smtp-verify" action="/settings/smtp-verify">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -454,3 +456,5 @@
     </div>
 
 </form>
+</div>
+</div>

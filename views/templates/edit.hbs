@@ -3,10 +3,13 @@
     <li><a href="/templates/">{{#translate}}Templates{{/translate}}</a></li>
     <li class="active">{{#translate}}Edit Template{{/translate}}</li>
 </ol>
+<div class="card">
+    <div class="card-header">
 
 <h2>{{#translate}}Edit Template{{/translate}} <a class="btn btn-default btn-xs" href="/templates/" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> {{#translate}}Back to templates{{/translate}}</a></h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form method="post" class="delete-form" id="templates-delete" action="/templates/delete">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -59,3 +62,5 @@
 
 
 </form>
+</div>
+</div>

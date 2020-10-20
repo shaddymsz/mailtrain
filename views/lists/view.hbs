@@ -4,6 +4,8 @@
     <li class="active">{{name}}</li>
 </ol>
 
+<div class="card">
+    <div class="card-header">
 <div class="pull-right">
 
     <a class="btn btn-default" href="/subscription/{{cid}}" target="_blank" role="button"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> {{#translate}}Subscription Form{{/translate}}</a>
@@ -25,9 +27,11 @@
     </div>
 </div>
 
+
 <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{name}}</h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 {{#if description}}
     <div class="well well-sm">{{{description}}}</div>
@@ -204,4 +208,6 @@
             </div>
         {{/if}}
     </div>
+</div>
+</div>
 </div>

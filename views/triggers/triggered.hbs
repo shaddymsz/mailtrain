@@ -3,10 +3,12 @@
     <li><a href="/triggers">{{#translate}}Automation Triggers{{/translate}}</a></li>
     <li class="active">{{#translate}}Triggered{{/translate}} {{name}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span> {{name}} <small>{{#translate}}Triggered subscribers{{/translate}}</small></h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 {{#if description}}
     <div class="well well-sm">{{{description}}}</div>
@@ -44,4 +46,6 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>

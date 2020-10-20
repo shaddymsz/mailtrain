@@ -3,10 +3,12 @@
     <li><a href="/triggers/">{{#translate}}Automation Triggers{{/translate}}</a></li>
     <li class="active">{{#translate}}Create Trigger{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Create Trigger{{/translate}}</h2>
 
-<hr>
+</div>
+<div class="card-body">
 
 <form class="form-horizontal" method="post" action="/triggers/create">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
@@ -160,3 +162,5 @@
 
 
 </form>
+</div>
+</div>

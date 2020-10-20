@@ -3,11 +3,12 @@
     <li><a href="/lists/">{{#translate}}Lists{{/translate}}</a></li>
     <li class="active">{{#translate}}Create List{{/translate}}</li>
 </ol>
-
+<div class="card">
+    <div class="card-header">
 <h2>{{#translate}}Create List{{/translate}}</h2>
 
-<hr>
-
+</div>
+<div class="card-body">
 <form class="form-horizontal" method="post" action="/lists/create">
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <div class="form-group">
@@ -58,3 +59,5 @@
         </div>
     </div>
 </form>
+</div>
+</div>
