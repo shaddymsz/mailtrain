@@ -38,53 +38,6 @@
 
 <body class="{{bodyClass}}">
 
-
-{{!-- <nav class="mnb navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">En</a></li>
-     
-        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{user.username}} <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/users/account">
-                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{#translate}}Account{{/translate}}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/settings">
-                                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> {{#translate}}Settings{{/translate}}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/blacklist">
-                                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> {{#translate}}Blacklist{{/translate}}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/users/api">
-                                        <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> {{#translate}}API{{/translate}}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/users/logout">
-                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> {{#translate}}Log out{{/translate}}
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-      </ul>
-      <form class="navbar-form search-form navbar-right">
-        <input type="text" class="form-control" placeholder="Search...">
-      </form>
-    </div>
-  </div>
-</nav> --}}
-<!--msb: main sidebar-->
 <div class="msb" id="msb">
 		<nav class="navbar" role="navigation">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -119,11 +72,23 @@
 
 <div class="page-main-header">
     <div class="main-header-right row">
-        <div class="mobile-sidebar d-block"><div class="media-body text-right switch-sm"><label class="switch"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg></a></label></div></div>
+        <div class="main-header-left d-lg-none"><div class="logo-wrapper"><a href=""></a></div></div>
+        <div class="mobile-sidebar d-block"><div class=" text-right switch-sm"><label class="switch"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg></a></label></div></div>
         <div class="nav-right col p-0">
-            
-  {{!-- <ul class="nav-menus ">
-      <li class="dropdown">
+            <ul class="nav-menus">
+                <li>
+                    <div>
+                        <form class="form-inline search-form">
+                            <div class="form-group">
+                                <input class="form-control-plaintext" type="text" placeholder="search">
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+                {{!-- ============= --}}
+
+                <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{user.username}} <span class="caret"></span>
                             </a>
@@ -155,7 +120,8 @@
                                 </li>
                             </ul>
                         </li>
-  </ul> --}}
+
+            </ul>            
 
         </div>
     </div>
